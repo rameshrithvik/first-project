@@ -15,9 +15,9 @@ jobs:
         with:
           python-version: "3.x"
 
-        -name: install dependencies
-         run: pip install -r requirements.txt
+      - name: install dependencies
+        run: pip install -r requirements.txt
 
-        -name: run tests
-         run: pytest
+      - name: run tests
+        run: pytest
         
