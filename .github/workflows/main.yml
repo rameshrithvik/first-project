@@ -1,0 +1,23 @@
+name: first-one
+on:
+  push:
+  pull_request:
+
+jobs:
+  test-job:
+    runs-on: ubuntu-latest
+    steps:
+      - name: checkout code
+        uses: actions/checkout@v5.0.0
+
+      - name: setup python
+        uses: actions/setup-python@v6.0.0
+        with:
+          python-version: "3.x"
+
+        -name: install dependencies
+         run: pip install -r requirements.txt
+
+        -name: run tests
+         run: pytest
+        
